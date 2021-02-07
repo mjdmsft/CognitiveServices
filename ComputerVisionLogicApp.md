@@ -8,7 +8,7 @@ We will create a Logic App with which we can automate a workflow. The workflow w
 ### Create a container in Cosmos DB
 1. Go to your previously created Azure Cosmos DB in the Azure portal.
 2. In Overview, click on **+ Add Container** in the top bar.
-<img src="/media/LogicApp1.png" alt="drawing" width="800"/>
+<img src="/media/LogicApp1.png" alt="drawing" width="600"/>
 
 ### Create a Logic App
 1.	Open the Azure Portal.
@@ -22,7 +22,7 @@ We will create a Logic App with which we can automate a workflow. The workflow w
 9.	Keep Log Analytics Off. 
 10.	Click on **Review + Create**.
 11.	Click on **Create**. 
-<img src="/media/LogicApp2.png" alt="drawing" width="800"/>
+<img src="/media/LogicApp2.png" alt="drawing" width="400"/>
 
 1. Once deployment is complete. Navigate to your new Logic App. 
 1. Scroll down and under Templates, click on **Blank Logic App**. 
