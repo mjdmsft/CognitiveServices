@@ -50,7 +50,9 @@ This trigger is now added to your workflow.
 1. Search for **describe image** and select the **Describe Image (preview)** action to be added to your workflow.
 <img src="/media/LogicApp9.png" alt="drawing" width="800"/>
 
-You're now going to connect to your existing Cognitive Service by copying the endpoint and key from your Cognitive Service resource. 
+1. Connect to your existing Cognitive Service by copying the endpoint and key from your Cognitive Service resource. Paste them both into your Logic App. It should look something like this:
+<img src="/media/LogicApp9B.PNG" alt="drawing" width="800"/>
+
 1. Click on the field next to **Image Source** and select **Image Content**.
 1. Click on the field next to **Image Content** and use the **Dynamic content** pop-up window on the right to fill in **File Content**.
 <img src="/media/LogicApp10.png" alt="drawing" width="800"/>
