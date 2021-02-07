@@ -74,6 +74,16 @@ We are going to create a JSON object to store in our Cosmos DB. It should end up
 - Create this by typing into the **Inputs** and using the **Dynamic Content** to add the necessary variables. 
 - Make sure all keys and values are between quotation marks (“key”:”value”), except for Tag Names.
 - When you add **Captions Caption Text**, it will add a for each loop for you. **Accept this** change and don’t remove it.
+- You can copy the JSON below as a starting point and add the Dynamic Content between the righter quotations marks.
+
+`{
+"Captions":"",
+"ImageId":"",
+"Tags":"",
+"id":""
+}`
+
+
 <img src="/media/LogicApp13.png" alt="drawing" width="800"/>
 
 33. Within your **For each loop**, add a **+New step**. 
