@@ -33,8 +33,8 @@ First thing we have to do in our Logic Apps Designer, is create a trigger.
 <img src="/media/LogicApp4.png" alt="drawing" width="800"/>
 
 This trigger is now added to your workflow. 
-Now, we will create a connection to your existing Storage Account.
-1. Select the container **images** that you created under Lab 1: Technical Requirements.
+1. Create a connection to your existing Storage Account by specifying a name for the connection and the Storage Account you want to connect with.
+1. Select the container **images** that you created under Lab 1: Technical Requirements. You can select a container by clicking on the **folder** icon on the right of the field. 
 1. When your trigger looks like the screenshot below: click on **+ New step** to add a next step and action.
 <img src="/media/LogicApp5.png" alt="drawing" width="800"/>
 
