@@ -26,7 +26,7 @@ We will create a Logic App with which we can automate a workflow. The workflow w
 
 1. Once deployment is complete. Navigate to your new Logic App. 
 1. Scroll down and under Templates, click on **Blank Logic App**. 
-<img src="/media/LogicApp3.png" alt="drawing" width="800"/>
+<img src="/media/LogicApp3.png" alt="drawing" width="400"/>
 
 First thing we have to do in our Logic Apps Designer, is create a trigger. 
 1. Search for “blob” and select **When a blob is added or modified**
