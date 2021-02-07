@@ -24,51 +24,51 @@ We will create a Logic App with which we can automate a workflow. The workflow w
 11.	Click on **Create**. 
 <img src="/media/LogicApp2.png" alt="drawing" width="400"/>
 
-1. Once deployment is complete. Navigate to your new Logic App. 
-1. Scroll down and under Templates, click on **Blank Logic App**. 
+12. Once deployment is complete. Navigate to your new Logic App. 
+13. Scroll down and under Templates, click on **Blank Logic App**. 
 <img src="/media/LogicApp3.png" alt="drawing" width="400"/>
 
 First thing we have to do in our Logic Apps Designer, is create a trigger. 
-1. Search for “blob” and select **When a blob is added or modified**
+14. Search for “blob” and select **When a blob is added or modified**
 <img src="/media/LogicApp4.png" alt="drawing" width="800"/>
 
 This trigger is now added to your workflow. 
-1. Create a connection to your existing Storage Account by specifying a name for the connection and the Storage Account you want to connect with.
-1. Select the container **images** that you created under Lab 1: Technical Requirements. You can select a container by clicking on the **folder** icon on the right of the field. 
-1. When your trigger looks like the screenshot below: click on **+ New step** to add a next step and action.
+15. Create a connection to your existing Storage Account by specifying a name for the connection and the Storage Account you want to connect with.
+16. Select the container **images** that you created under Lab 1: Technical Requirements. You can select a container by clicking on the **folder** icon on the right of the field. 
+17. When your trigger looks like the screenshot below: click on **+ New step** to add a next step and action.
 <img src="/media/LogicApp5.png" alt="drawing" width="800"/>
 
-1. Search for **get blob content** and select the action **Get blob content** to add this to your workflow. 
+18. Search for **get blob content** and select the action **Get blob content** to add this to your workflow. 
 <img src="/media/LogicApp6.png" alt="drawing" width="800"/>
 
-1. When you click on the field next to **Blob**, a new pop-up window will appear on the right with the **Dynamic content**. From this pop-up window, select **List of Files Path** to use this to specify the blob.
+19. When you click on the field next to **Blob**, a new pop-up window will appear on the right with the **Dynamic content**. From this pop-up window, select **List of Files Path** to use this to specify the blob.
 <img src="/media/LogicApp7.png" alt="drawing" width="800"/>
 
-1. Again, click on **+ New step**. 
+20. Again, click on **+ New step**. 
 <img src="/media/LogicApp8.png" alt="drawing" width="800"/>
 
-1. Search for **describe image** and select the **Describe Image (preview)** action to be added to your workflow.
+21. Search for **describe image** and select the **Describe Image (preview)** action to be added to your workflow.
 <img src="/media/LogicApp9.png" alt="drawing" width="800"/>
 
-1. Connect to your existing Cognitive Service by copying the endpoint and key from your Cognitive Service resource. Paste them both into your Logic App. It should look something like this:
+22. Connect to your existing Cognitive Service by copying the endpoint and key from your Cognitive Service resource. Paste them both into your Logic App. It should look something like this:
 <img src="/media/LogicApp9B.PNG" alt="drawing" width="800"/>
 
-1. Click on the field next to **Image Source** and select **Image Content**.
-1. Click on the field next to **Image Content** and use the **Dynamic content** pop-up window on the right to fill in **File Content**.
+23. Click on the field next to **Image Source** and select **Image Content**.
+24. Click on the field next to **Image Content** and use the **Dynamic content** pop-up window on the right to fill in **File Content**.
 <img src="/media/LogicApp10.png" alt="drawing" width="800"/>
 
-1. Add a **+ New step**. 
-1. Search for **initialize variable** and choose **Initialize variable** as an action to add to your workflow. 
-1. After **Name** put **ID**.
-1. For **Type** select **Integer**.
-1. For **Value** type in **999**.
+25. Add a **+ New step**. 
+26. Search for **initialize variable** and choose **Initialize variable** as an action to add to your workflow. 
+27. After **Name** put **ID**.
+28. For **Type** select **Integer**.
+29. For **Value** type in **999**.
 <img src="/media/LogicApp11.png" alt="drawing" width="800"/>
 
-1. Add a **+New step**.
-1. Search for **compose** and add the **Compose** action to your workflow. 
+30. Add a **+New step**.
+31. Search for **compose** and add the **Compose** action to your workflow. 
 <img src="/media/LogicApp12.png" alt="drawing" width="800"/>
 
-1. Click on the field of **Inputs**.
+32. Click on the field of **Inputs**.
 
 We are going to create a JSON object to store in our Cosmos DB. It should end up looking like the screenshot below. 
 - Create this by typing into the **Inputs** and using the **Dynamic Content** to add the necessary variables. 
@@ -76,18 +76,18 @@ We are going to create a JSON object to store in our Cosmos DB. It should end up
 - When you add **Captions Caption Text**, it will add a for each loop for you. **Accept this** change and don’t remove it.
 <img src="/media/LogicApp13.png" alt="drawing" width="800"/>
 
-1. Within your **For each loop**, add a **+New step**. 
-1. Search for **cosmos db** and select **Create or update document** action to add to your workflow. 
-1. Connect to your previously created Cosmos DB account. 
-1. For **Database ID** select **Images**.
-1. For **Collection ID** select **results**.
-1. For **Document** use the **Dynamic Content** to fill in **Outputs**. 
-1. **Add new parameter** and add the **Partition key value**.
-1. For **Partition key value**, fill in **“List of Files Name”**. Don’t forget the quotation marks!
+33. Within your **For each loop**, add a **+New step**. 
+34. Search for **cosmos db** and select **Create or update document** action to add to your workflow. 
+35. Connect to your previously created Cosmos DB account. 
+36. For **Database ID** select **Images**.
+37. For **Collection ID** select **results**.
+38. For **Document** use the **Dynamic Content** to fill in **Outputs**. 
+39. **Add new parameter** and add the **Partition key value**.
+40. For **Partition key value**, fill in **“List of Files Name”**. Don’t forget the quotation marks!
 <img src="/media/LogicApp14.png" alt="drawing" width="800"/>
 
-1. On the left top, **save** your workflow and then **Run** it. 
+41. On the left top, **save** your workflow and then **Run** it. 
 
 ### Trigger the Logic App by adding images to your Blob Storage
-1. Now, add images from the sample-images folder to your Storage Account container called images and you should see the results in your Cosmos DB. **Make sure you only add the images!**
+42. Now, add images from the sample-images folder to your Storage Account container called images and you should see the results in your Cosmos DB. **Make sure you only add the images!**
 
