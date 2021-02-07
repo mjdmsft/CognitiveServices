@@ -86,7 +86,7 @@ We are going to create a JSON object to store in our Cosmos DB. It should end up
 
 <img src="/media/LogicApp13.png" alt="drawing" width="800"/>
 
-33. Within your **For each loop**, add a **+New step**. 
+33. **Within** your **For each loop**, choose to **Add an action**. 
 34. Search for **cosmos db** and select **Create or update document** action to add to your workflow. 
 35. Connect to your previously created Cosmos DB account. 
 36. For **Database ID** select **Images**.
